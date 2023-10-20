@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Ranked</title>
+    <!-- link to css file -->
+    <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+    <!-- bootstrap links (1) for mobile (2) implement bootstrap (3) icons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- link for fonts -->
+    <link href="https://fonts.cdnfonts.com/css/mark-pro" rel="stylesheet">
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-black" id="indexNav">
+        <div class="container-fluid">
+            <!-- title of league leaderboard page -->
+            <a href="#" class="navbar-brand" id="lolTitle">
+                <img src="https://brand.riotgames.com/static/a91000434ed683358004b85c95d43ce0/3591c/lol-logo.webp" style="padding-bottom: 5px; width: 25px; height: 30px;">
+                LEAGUE OF LEGENDS LEADERBOARD
+            </a>
+            <!-- nav bar menu pops up when in > medium(md) screen size -->
+            <button class="navbar-toggler" 
+                data-bs-toggle="collapse"
+                data-bs-target="#nav-collapse">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-collapse">
+                <!-- the nav bar options -->
+                <div class="navbar-nav ms-auto">
+                    <!-- link to home page -->
+                    <a class="nav-link lol-text" href="/">HOME</a>
+                    <!-- link to valorant leaderboard -->
+                    <a class="nav-link lol-text" href="/valLeaders">VALORANT LEADERBOARD</a>
+                    <!-- link to league of legends(current) -->
+                    <a class="nav-link lol-text" href="#">LOL LEADERBOARD</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- League Leaderboards TOP 100 players -->
+    <section id="LolLeaderboard">
+        <!-- creating a table to show data -->
+        <table class="rank-table" id="lolRank-table">
+            <!-- creating table row for the headers -->
+            <tr class="rank-tr lol-text">
+                <th class="rank-td">RANK</th>
+                <th class="rank-td">GAMERTAG</th>
+                <th class="rank-td">LEAGUE POINTS</th>
+                <th class="rank-td">TOTAL WINS</th>
+            </tr>
+            {% for player in players %}
+            <!-- creating table row for the player data -->
+            <tr class="rank-tr player-font">
+                <td class="rank-td">{{player[0]}}</td>
+                <td class="rank-td">{{player[1]}}</td>
+                <td class="rank-td">{{player[2]}}</td>
+                <td class="rank-td">{{player[3]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <!-- javascript link for bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

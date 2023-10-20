@@ -1,0 +1,8 @@
+wheel
+flask
+pytest
+requests
+google-cloud-datastore
+google-cloud-firestore
+gunicorn
+rsa

@@ -1,0 +1,57 @@
+/* Title of the navbar */
+#indexTitle,
+#indexNav,
+.player-font {
+    font-family: 'Mark Pro', sans-serif;
+    font-weight: 500;
+}
+#ValLead,
+#ValLeaderboard,
+#LolLead,
+#LolLeaderboard{
+    position: relative;
+    top: 50px;
+    padding: 5%;
+}
+#mainVal{
+    text-align: center;
+}
+#mainLol{
+    text-align: center;
+}
+.rank-table{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.val-text,
+#valTitle{
+    font-family: "VALORANT", Courier;
+    color: #f85253;
+}
+.lol-text,
+#lolTitle{
+    font-family: "League";
+    src: url('fonts/Friz\ Quadrata\ Regular.ttf') format('truetype');
+    color: #ddc485;
+}
+.rank-tr, .rank-td{
+    border: 1px solid;
+    text-align: center;
+}
+#valRank-table{
+    color: #f85253;
+    background-color: #1F2739;
+}
+#valTitle{
+    height: 25px;
+    color: #f85253;
+}
+#lolRank-table{
+    color: #ddc485;
+    background-color: #010a13;
+}
+#lolTitle{
+    height: 25px;
+    color: #ddc485;
+}
